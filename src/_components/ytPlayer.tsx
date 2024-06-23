@@ -17,8 +17,13 @@ export default function YtPlayer(){
     "K-VAAhtdFq0",
     "b1ACU-ajNDE"
 
-]
+]   
     const [url,setUrl] = useState(getRandomElement(randomVids));
+    useEffect(()=>{
+        console.log("change the nature")
+    },[url])
+
+ 
  
 
     return(<div>
