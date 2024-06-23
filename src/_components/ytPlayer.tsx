@@ -18,16 +18,19 @@ export default function YtPlayer(){
     "b1ACU-ajNDE"
 
 ]   
-    const [url,setUrl] = useState(getRandomElement(randomVids));
-    useEffect(()=>{
-        console.log("change the nature")
-    },[url])
+    const [url,setUrl] = useState(() => getRandomElement(randomVids));
+    
+   
 
- 
+     function onclick (){
+        setUrl(getRandomElement(randomVids))
+    }
  
 
     return(<div>
-           
+           <button onClick={onclick}>
+            Clickme 
+           </button>
            <iframe width="772" height="434" src={`https://www.youtube.com/embed/${url}`}
             title="Vivisection (Full Video)" frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write;
